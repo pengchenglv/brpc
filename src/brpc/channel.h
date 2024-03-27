@@ -139,6 +139,7 @@ private:
     butil::PtrContainer<ChannelSSLOptions> _ssl_options;
 };
 
+// channel代表一个连接，可以和server通信，但是不能直接使用，只能借助stub
 // A Channel represents a communication line to one server or multiple servers
 // which can be used to call that Server's services. Servers may be running
 // on another machines. Normally, you should not call a Channel directly, but
