@@ -1239,6 +1239,7 @@ void Controller::set_auth_context(const AuthContext* ctx) {
     _auth_context = ctx;
 }
 
+// 当tcp 段开后，会调用该函数，进而回调
 int Controller::HandleSocketFailed(bthread_id_t id, void* data, int error_code,
                                    const std::string& error_text) {
     Controller* cntl = static_cast<Controller*>(data);
