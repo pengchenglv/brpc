@@ -25,6 +25,7 @@
 namespace bthread {
 
 // Utilities to manipulate bthread_t
+// version 和value组合在一起构成一个唯一的bthread_t
 inline bthread_t make_tid(uint32_t version, butil::ResourceId<TaskMeta> slot) {
     return (((bthread_t)version) << 32) | (bthread_t)slot.value;
 }
